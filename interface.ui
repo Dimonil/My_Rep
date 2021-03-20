@@ -2,18 +2,45 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>476</width>
-    <height>371</height>
+    <width>411</width>
+    <height>288</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>411</width>
+    <height>288</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>411</width>
+    <height>288</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>FishBot</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <widget class="QGroupBox" name="groupBox">
     <property name="enabled">
      <bool>true</bool>
@@ -22,50 +49,82 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>431</width>
-      <height>291</height>
+      <width>400</width>
+      <height>231</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>UnifrakturCook</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(image/Bg.png)</string>
+    </property>
     <property name="title">
-     <string>GroupBox</string>
+     <string>Albion Offline </string>
     </property>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>60</x>
+       <x>50</x>
        <y>20</y>
        <width>91</width>
        <height>20</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Размер крючка</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="bait">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>70</y>
-       <width>111</width>
-       <height>17</height>
-      </rect>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
      </property>
      <property name="text">
-      <string>Проесть еду</string>
+      <string>  Размер крючка</string>
      </property>
     </widget>
     <widget class="QCheckBox" name="eat">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>50</y>
-       <width>101</width>
-       <height>17</height>
+       <y>130</y>
+       <width>16</width>
+       <height>20</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
      <property name="text">
-      <string>Проесть наживку</string>
+      <string>Проесть еду</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="bait">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string>Проесть нажи</string>
      </property>
     </widget>
     <widget class="QSpinBox" name="spinBox">
@@ -88,7 +147,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>90</y>
+       <y>150</y>
        <width>31</width>
        <height>31</height>
       </rect>
@@ -98,109 +157,68 @@
        <pointsize>8</pointsize>
       </font>
      </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Sunken</enum>
+     </property>
+     <property name="placeholderText">
+      <string>f1</string>
+     </property>
     </widget>
     <widget class="QTextEdit" name="key_eat">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>130</y>
+       <y>190</y>
        <width>31</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::WinPanel</enum>
+     </property>
+     <property name="placeholderText">
+      <string>f2</string>
      </property>
     </widget>
     <widget class="QLabel" name="key_bait2">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>90</y>
-       <width>101</width>
+       <x>40</x>
+       <y>160</y>
+       <width>91</width>
        <height>20</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
      <property name="text">
-      <string>Клавиша наживки</string>
+      <string> Клавиша нажив</string>
      </property>
     </widget>
     <widget class="QLabel" name="key_eat2">
      <property name="geometry">
       <rect>
-       <x>50</x>
-       <y>130</y>
-       <width>111</width>
+       <x>40</x>
+       <y>200</y>
+       <width>91</width>
        <height>20</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Клавиша еды</string>
-     </property>
-    </widget>
-    <widget class="QWidget" name="formLayoutWidget">
-     <property name="geometry">
-      <rect>
-       <x>220</x>
-       <y>150</y>
-       <width>171</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <layout class="QFormLayout" name="formLayout">
-      <item row="2" column="1">
-       <widget class="QPushButton" name="start">
-        <property name="text">
-         <string>Start</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="stop">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>Stop</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QPushButton" name="settings">
-        <property name="text">
-         <string>ConfirmSettings</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>230</y>
-       <width>381</width>
-       <height>31</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="tophint">
-     <property name="geometry">
-      <rect>
-       <x>319</x>
-       <y>10</y>
-       <width>71</width>
-       <height>20</height>
-      </rect>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
      </property>
      <property name="text">
-      <string>tophint</string>
+      <string> Клавиша еды</string>
      </property>
     </widget>
     <widget class="QSpinBox" name="wait_bait">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>10</x>
        <y>50</y>
        <width>42</width>
        <height>22</height>
@@ -213,65 +231,402 @@
     <widget class="QSpinBox" name="wait_eat">
      <property name="geometry">
       <rect>
-       <x>160</x>
+       <x>10</x>
        <y>80</y>
        <width>42</width>
        <height>22</height>
       </rect>
      </property>
     </widget>
-    <widget class="QKeySequenceEdit" name="keySequenceEdit">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>270</y>
-       <width>381</width>
-       <height>31</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>50</x>
        <y>50</y>
-       <width>111</width>
-       <height>16</height>
+       <width>91</width>
+       <height>20</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
      <property name="text">
-      <string>Задержка наживки</string>
+      <string> Задержка нажив</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>50</x>
        <y>80</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string> Задержка еды</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="SpinBox_hook">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>20</y>
+       <width>51</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="value">
+      <double>5.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>50</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>110</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string>  Проесть нажив</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>91</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string>  Проесть еду</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="stop">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>170</y>
+       <width>81</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/button.png);
+font: 75 12pt &quot;UnifrakturCook&quot;;
+color: rgb(255, 206, 58);</string>
+     </property>
+     <property name="text">
+      <string>Stop</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="start">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>140</y>
+       <width>81</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>UnifrakturCook</family>
+       <pointsize>12</pointsize>
+       <weight>9</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/button.png);
+font: 75 12pt &quot;UnifrakturCook&quot;;
+color: rgb(255, 206, 58);</string>
+     </property>
+     <property name="text">
+      <string>Start</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="settings">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>200</y>
+       <width>111</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/button2.png);
+font: 75 12pt &quot;UnifrakturCook&quot;;
+color: rgb(255, 206, 58);</string>
+     </property>
+     <property name="text">
+      <string>Confirm</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>20</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string> Точность</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>50</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string> Таймер нажив</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="SpinBox_percent_find">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>110</y>
+       <width>41</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <double>0.100000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>0.990000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+     <property name="value">
+      <double>0.700000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_percent_find">
+     <property name="geometry">
+      <rect>
+       <x>189</x>
+       <y>110</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string>  Percent find</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_3">
+     <property name="geometry">
+      <rect>
+       <x>151</x>
+       <y>80</y>
+       <width>41</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>80</y>
+       <width>141</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string>  зона крючка в мини-игре</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="timerWork">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>140</y>
+       <width>42</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>140</y>
        <width>101</width>
        <height>16</height>
       </rect>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
      <property name="text">
-      <string>Задержка еды</string>
+      <string>Таймер работы</string>
      </property>
     </widget>
-    <zorder>tophint</zorder>
-    <zorder>label</zorder>
-    <zorder>bait</zorder>
-    <zorder>eat</zorder>
-    <zorder>spinBox</zorder>
-    <zorder>key_bait</zorder>
-    <zorder>key_eat</zorder>
-    <zorder>key_bait2</zorder>
-    <zorder>key_eat2</zorder>
-    <zorder>formLayoutWidget</zorder>
-    <zorder>lineEdit</zorder>
-    <zorder>wait_bait</zorder>
-    <zorder>wait_eat</zorder>
-    <zorder>keySequenceEdit</zorder>
-    <zorder>label_2</zorder>
-    <zorder>label_3</zorder>
+    <widget class="QCheckBox" name="timer_activate">
+     <property name="geometry">
+      <rect>
+       <x>149</x>
+       <y>166</y>
+       <width>16</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>162</x>
+       <y>165</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string> запустить таймер</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="geteat">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>190</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CheckBox</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="getbait">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>210</y>
+       <width>16</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CheckBox</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>189</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string> Заполнение еды</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>208</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-image: url(image/Text.png)</string>
+     </property>
+     <property name="text">
+      <string> Заполнение наж</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>341</width>
+      <height>16</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -279,7 +634,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>476</width>
+     <width>411</width>
      <height>21</height>
     </rect>
    </property>
