@@ -1,0 +1,9 @@
+public int dif_y(DateTime a, DateTime b){
+		int count = a.Year - b.Year;
+		if(a.Month < b.Month ){
+			count--;
+		}else if(a.Month == b.Month){
+			if(a.Day<b.Day) count--;
+		}			
+		return count;
+	}
