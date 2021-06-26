@@ -161,7 +161,7 @@ namespace WindowsFormsApp1
                     nCMD.CommandText = "select base_rate,groups.id_group from groups,staffs where staffs.id = @id and staffs.id_group = groups.id_group";
                     SQLiteDataReader new_reader1 = nCMD.ExecuteReader();
 
-                    if (new_reader1.Read())
+                    if (new_reader1.Read())// счет зарплаты 
                     {
                         if (new_reader1.GetValue(1).ToString() == "1")
                         {
@@ -190,7 +190,7 @@ namespace WindowsFormsApp1
                     nCMD.CommandText = "select base_rate,groups.id_group from groups,staffs where staffs.id = @id and staffs.id_group = groups.id_group";
                     SQLiteDataReader new_reader2 = nCMD.ExecuteReader();
                                        
-                    if (new_reader2.Read())
+                    if (new_reader2.Read())// счет зарплаты
                     {
                         if (new_reader2.GetValue(0).ToString() == "1")
                         {
